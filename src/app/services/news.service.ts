@@ -8,8 +8,6 @@ import "rxjs/add/operator/map";
 @Injectable()
 export class NewsService {
   constructor(private http: Http) {}
-  baseUrl = "https://api.nytimes.com/svc/topstories/v2/";
-
   getSectionNews(sectionName: string): any {
     // fetch news of that sectionName
     let url =

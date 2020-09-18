@@ -10,13 +10,13 @@ export class NewsActions {
   LoadSectionNews(list: News[]): Action {
     // console.log(list);
     return {
-      type: "LOAD_SECTION_NEWS",
+      type: "[News] LOAD_SECTION_NEWS",
       payload: list,
     };
   }
   FilterSubsection(subsection: string): Action {
     return {
-      type: "FILTER_SUBSECTION",
+      type: "[News] FILTER_SUBSECTION",
       payload: subsection,
     };
   }

@@ -21,7 +21,7 @@ export const initialState: NewsState = {
 // implement actions
 export function news(state = initialState, action: Action) {
   switch (action.type) {
-    case "LOAD_SECTION_NEWS": {
+    case LOAD_SECTION_NEWS: {
       //   console.log("Inside load section news");
       return {
         newsList: [...action.payload],
@@ -29,9 +29,12 @@ export function news(state = initialState, action: Action) {
       };
     }
     case FILTER_SUBSECTION: {
+      console.log("inside filtersubsection");
+      console.log(state.newsList);
+      console.log(action.payload);
       return {
-        newsList: [],
-        filter: "",
+        newsList: [...state.newsList],
+        filter: action.payload,
       };
     }
     default: {

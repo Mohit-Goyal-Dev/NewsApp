@@ -5,6 +5,8 @@ import { NewsActions } from "../../store/actions/news.actions";
 import { Component, OnInit } from "@angular/core";
 import { Store } from "@ngrx/store";
 import { Observable } from "rxjs/Observable";
+import { NewsService } from "../../services/news.service";
+import { ActivatedRoute } from "@angular/router";
 
 @Component({
   selector: "app-navbar",
@@ -14,16 +16,31 @@ import { Observable } from "rxjs/Observable";
 export class NavbarComponent implements OnInit {
   subsections: string[];
   response: Object[];
-  constructor(private store: Store<any>, private newsActions: NewsActions) {}
+  constructor(private store: Store<any>, private newsAction: NewsActions) {}
 
   ngOnInit() {
-    this.store.select("sections").subscribe((response: string[]) => {
-      this.subsections = response;
+    // this.store.select("sections").subscribe((response: string[]) => {
+    //   this.subsections = response;
+    // });
+
+    let sectionNewsList: News[];
+    this.store.select("news").subscribe((response: NewsState) => {
+      sectionNewsList = response.newsList;
+      this.subsections = [];
+      for (const item of sectionNewsList) {
+        if (
+          item.subsection.length &&
+          this.subsections.indexOf(item.subsection) === -1
+        ) {
+          // console.log(item.subsection);
+          this.subsections.push(item.subsection);
+        }
+      }
     });
   }
 
   dispatchAction($event: string) {
     console.log($event);
-    // this.store.dispatch($event);
+    this.store.dispatch(this.newsAction.FilterSubsection($event));
   }
 }
