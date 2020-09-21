@@ -29,9 +29,9 @@ export function news(state = initialState, action: Action) {
       };
     }
     case FILTER_SUBSECTION: {
-      console.log("inside filtersubsection");
-      console.log(state.newsList);
-      console.log(action.payload);
+      // console.log("inside filtersubsection");
+      // console.log(state.newsList);
+      // console.log(action.payload);
       return {
         newsList: [...state.newsList],
         filter: action.payload,
@@ -43,6 +43,10 @@ export function news(state = initialState, action: Action) {
   }
 }
 
-export const getNewsList = (state: any) => {};
+export const getNewsList = (state: any) => {
+  return state;
+};
 
-export const getFilter = (state: any) => {};
+export const getFilter = (state: any) => {
+  return state.filter;
+};

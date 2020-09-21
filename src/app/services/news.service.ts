@@ -8,9 +8,10 @@ import "rxjs/add/operator/map";
 @Injectable()
 export class NewsService {
   constructor(private http: Http) {}
+  url: string;
   getSectionNews(sectionName: string): any {
     // fetch news of that sectionName
-    let url =
+    this.url =
       "https://api.nytimes.com/svc/topstories/v2/" +
       sectionName +
       ".json?api-key=315a5a51483b469a918246dc2753b339";
@@ -18,6 +19,8 @@ export class NewsService {
     // this.http.get(url).subscribe((response) => {
     //   console.log(response.json());
     // });
-    return this.http.get(url);
+    return this.http.get(this.url).map((response) => {
+      return <NewsResponse>response.json();
+    });
   }
 }

@@ -54,7 +54,8 @@ export class NewsComponent implements OnInit {
         .getSectionNews(sectionName)
         .subscribe((response: any) => {
           this.store.dispatch(
-            this.newsAction.LoadSectionNews(response.json().results)
+            // this.newsAction.LoadSectionNews(response.json().results)
+            this.newsAction.LoadSectionNews(response.results)
           );
         });
 

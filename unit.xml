@@ -1,68 +1,32 @@
 <?xml version="1.0"?>
-<testsuite name="HeadlessChrome 85.0.4183 (Windows 10.0.0)" package="unit" timestamp="2020-09-18T16:14:13" id="0" hostname="DESKTOP-OJQNI96" tests="24" errors="0" failures="3" time="1.072">
+<testsuite name="HeadlessChrome 85.0.4183 (Windows 10.0.0)" package="unit" timestamp="2020-09-21T09:54:11" id="0" hostname="DESKTOP-OJQNI96" tests="24" errors="0" failures="0" time="1.11">
   <properties>
     <property name="browser.fullName" value="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/85.0.4183.102 Safari/537.36"/>
   </properties>
-  <testcase name="AppComponent should create the app" time="0.139" classname="unit.AppComponent"/>
-  <testcase name="HeaderComponent should be created" time="0.032" classname="unit.HeaderComponent"/>
+  <testcase name="AppComponent should create the app" time="0.142" classname="unit.AppComponent"/>
+  <testcase name="HeaderComponent should be created" time="0.03" classname="unit.HeaderComponent"/>
   <testcase name="NavbarComponent should be created" time="0.037" classname="unit.NavbarComponent"/>
-  <testcase name="NavbarComponent should define the store" time="0.042" classname="unit.NavbarComponent"/>
-  <testcase name="NavbarComponent should define subsections" time="0.057" classname="unit.NavbarComponent"/>
-  <testcase name="NavbarComponent should display subsection in template" time="0.038" classname="unit.NavbarComponent"/>
-  <testcase name="NavbarComponent should call dispatchAction() when subsection is clicked" time="0.065" classname="unit.NavbarComponent"/>
-  <testcase name="NavbarComponent should dispatch action when dispatchAction is called" time="0.066" classname="unit.NavbarComponent"/>
-  <testcase name="NewsItemComponent should be created" time="0.061" classname="unit.NewsItemComponent"/>
-  <testcase name="NewsItemComponent should display title in template" time="0.084" classname="unit.NewsItemComponent"/>
-  <testcase name="NewsItemComponent should display news abstract in template" time="0.049" classname="unit.NewsItemComponent"/>
-  <testcase name="NewsComponent should create" time="0.094" classname="unit.NewsComponent"/>
-  <testcase name="NewsComponent should define the store" time="0.083" classname="unit.NewsComponent"/>
-  <testcase name="SectionsComponent should create the component" time="0.078" classname="unit.SectionsComponent"/>
-  <testcase name="SectionsComponent should store the sections in array: sectionList " time="0.065" classname="unit.SectionsComponent"/>
-  <testcase name="SectionsComponent should display the section name in DOM" time="0.049" classname="unit.SectionsComponent"/>
-  <testcase name="NewsService should be created" time="0.014" classname="unit.NewsService"/>
-  <testcase name="NewsService should get results" time="0.014" classname="unit.NewsService">
-    <failure type="">Expected Response with status: null null for URL: null to equal Object({ status: 'OK', copyright: 'Copyright (c) 2018 The New York Times Company. All Rights Reserved.', section: 'home', last_updated: '2018-03-31T07:27:13-04:00', num_results: 38, results: [ Object({ section: 'World', subsection: 'Europe', title: 'Trump Advisers Urge Tougher Russia Policy After Expulsions', abstract: 'xx', url: 'https://www.nytimes.com/2018/03/30/world/europe/russia-expels-diplomacy.html', byline: 'By PETER BAKER, ANDREW HIGGINS and STEVEN ERLANGER', item_type: 'Article', updated_date: '2018-03-31T06:22:15-04:00', created_date: '2018-03-30T14:17:19-04:00', published_date: '2018-03-30T14:17:19-04:00', material_type_facet: '', kicker: '', des_facet: [ 'Diplomatic Service, Embassies and Consulates', 'Espionage and Intelligence Services' ], org_facet: [ 'State Department', 'Boeing Company' ], per_facet: [ 'Putin, Vladimir V', 'Skripal, Sergei V' ], geo_facet: [ 'Moscow (Russia)', 'St Petersburg (Russia)', 'Seattle (Wash)' ], multimedia: [ Object({ url: 'https://static01.nyt.com/images/2018/03/31/world/europe/31dc-russia1-print-sub/31diplo-russia1-thumbStandard.jpg', format: 'Standard Thumbnail', height: 75, width: 75, type: 'image', subtype: 'photo', caption: 'xx', copyright: 'Alexander Nemenov/Agence France-Presse &amp;mdash; Getty Images' }), Object({ url: 'https://static01.nyt.com/images/2018/03/31/world/europe/31dc-russia1-print-sub/31diplo-russia1-thumbLarge.jpg', format: 'thumbLarge', height: 150, width: 150, type: 'image', subtype: 'photo', caption: 'xx', copyright: 'Alexander Nemenov/Agence France-Presse &amp;mdash; Getty Images' }), Object({ url: 'xx', format: 'Normal', height: 127, width: 190, type: 'image', subtype: 'photo', caption: 'xx', copyright: 'Alexander Nemenov/Agence France-Presse &amp;mdash; Getty Images' }), Object({ url: 'xx', format: 'mediumThreeByTwo210', height: 140, width: 210, type: 'image', subtype: 'photo', caption: 'xx', copyright: 'Alexander Nemenov/Agence France-Presse &amp;mdash; Getty Images' }), Object({ url: 'xx', format: 'superJumbo', height: 1365, width: 2048, type: 'image', subtype: 'photo', caption: 'xx', copyright: 'Alexander Nemenov/Agence France-Presse &amp;mdash; Getty Images' }) ], short_url: 'https://nyti.ms/2uzn7ds' }) ] }).
-    at new ZoneAwareError node_modules/zone.js/dist/zone.js:992:1)
-    at SafeSubscriber._next src/app/services/news.service.spec.ts:135:25)
-    at SafeSubscriber.webpackJsonp../node_modules/rxjs/Subscriber.js.SafeSubscriber.__tryOrSetError node_modules/rxjs/Subscriber.js:232:1)
-    at SafeSubscriber.webpackJsonp../node_modules/rxjs/Subscriber.js.SafeSubscriber.next node_modules/rxjs/Subscriber.js:174:1)
-    at Subscriber.webpackJsonp../node_modules/rxjs/Subscriber.js.Subscriber._next node_modules/rxjs/Subscriber.js:125:1)
-    at Subscriber.webpackJsonp../node_modules/rxjs/Subscriber.js.Subscriber.next node_modules/rxjs/Subscriber.js:89:1)
-    at TakeSubscriber.webpackJsonp../node_modules/rxjs/operator/take.js.TakeSubscriber._next node_modules/rxjs/operator/take.js:80:1)
-    at TakeSubscriber.webpackJsonp../node_modules/rxjs/Subscriber.js.Subscriber.next node_modules/rxjs/Subscriber.js:89:1)
-    at ReplaySubject.webpackJsonp../node_modules/rxjs/ReplaySubject.js.ReplaySubject._subscribe node_modules/rxjs/ReplaySubject.js:55:1)
-</failure>
-  </testcase>
-  <testcase name="The news reducer should load news, when LOAD_SECTION_NEWS dispatched" time="0" classname="unit.The news reducer"/>
-  <testcase name="The news reducer should update the filter, when FILTER_SUBSECTION is dispatched" time="0.001" classname="unit.The news reducer"/>
-  <testcase name="The news reducer should return the list of news, when getNewsList() is called" time="0.002" classname="unit.The news reducer">
-    <failure type="">Expected undefined to be [ Object({ section: 'Briefing', subsection: '', title: 'Ronny Jackson, North Korea, ‘Roseanne’: Your Thursday Briefing', abstract: 'Here’s what you need to know to start your day.', url: 'some url', byline: 'By CHRIS STANFORD', item_type: 'Article', updated_date: '2018-03-29T08:00:54-04:00', created_date: '2018-03-29T05:38:10-04:00', published_date: '2018-03-29T05:38:10-04:00', material_type_facet: '', kicker: '', des_facet: [  ], org_facet: [  ], per_facet: [  ], geo_facet: [  ], multimedia: [ Object({ url: 'some url', format: 'Standard Thumbnail', height: 75, width: 75, type: 'image', subtype: 'photo', caption: '', copyright: '' }), Object({ url: 'some url', format: 'thumbLarge', height: 150, width: 150, type: 'image', subtype: 'photo', caption: '', copyright: '' }), Object({ url: 'some url', format: 'Normal', height: 127, width: 190, type: 'image', subtype: 'photo', caption: '', copyright: '' }), Object({ url: 'some url', format: 'mediumThreeByTwo210', height: 140, width: 210, type: 'image', subtype: 'photo', caption: '', copyright: '' }), Object({ url: 'https://static01.nyt.com/images/2018/03/29/world/29USBriefing-Amcore/29USBriefing-Amcore-superJumbo-v2.jpg', format: 'superJumbo', height: 188, width: 624, type: 'image', subtype: 'photo', caption: '', copyright: '' }) ], short_url: 'https://nyti.ms/2uCje7F' }), Object({ section: 'N.Y. / Region', subsection: '', title: 'New York Today: Managing the Major Leagues', abstract: 'Thursday: Our teams’ new leaders, jazz then and now, and a chat room on the subway.', url: 'https://www.nytimes.com/2018/03/29/nyregion/new-york-today-yankees-mets-manager.html', byline: 'By ALEXANDRA S. LEVINE', item_type: 'Article', updated_date: '2018-03-29T10:28:10-04:00', created_date: '2018-03-29T06:00:05-04:00', published_date: '2018-03-29T06:00:05-04:00', material_type_facet: '', kicker: '', des_facet: [  ], org_facet: [  ], per_facet: [  ], geo_facet: [ 'New York City' ], multimedia: [ Object({ url: 'https://static01.nyt.com/images/2018/03/29/nyregion/29nytoday1/29nytoday1-thumbStandard.jpg', format: 'Standard Thumbnail', height: 75, width: 75, type: 'image', subtype: 'photo', caption: 'Aaron Boone of the Yankees, left, and Mickey Callaway of the Mets.', copyright: 'Lynne Sladky/Associated Press, Jasen Vinlove/USA Today Sports, via Reuters' }), Object({ url: 'https://static01.nyt.com/images/2018/03/29/nyregion/29nytoday1/29nytoday1-thumbLarge.jpg', format: 'thumbLarge', height: 150, width: 150, type: 'image', subtype: 'photo', caption: 'Aaron Boone of the Yankees, left, and Mickey Callaway of the Mets.', copyright: 'Lynne Sladky/Associated Press, Jasen Vinlove/USA Today Sports, via Reuters' }), Object({ url: 'https://static01.nyt.com/images/2018/03/29/nyregion/29nytoday1/29nytoday1-articleInline.jpg', format: 'Normal', height: 126, width: 190, type: 'image', subtype: 'photo', caption: 'Aaron Boone of the Yankees, left, and Mickey Callaway of the Mets.', copyright: 'Lynne Sladky/Associated Press, Jasen Vinlove/USA Today Sports, via Reuters' }), Object({ url: 'https://static01.nyt.com/images/2018/03/29/nyregion/29nytoday1/29nytoday1-mediumThreeByTwo210.jpg', format: 'mediumThreeByTwo210', height: 140, width: 210, type: 'image', subtype: 'photo', caption: 'Aaron Boone of the Yankees, left, and Mickey Callaway of the Mets.', copyright: 'Lynne Sladky/Associated Press, Jasen Vinlove/USA Today Sports, via Reuters' }), Object({ url: 'https://static01.nyt.com/images/2018/03/29/nyregion/29nytoday1/29nytoday1-superJumbo.jpg', format: 'superJumbo', height: 1355, width: 2048, type: 'image', subtype: 'photo', caption: 'Aaron Boone of the Yankees, left, and Mickey Callaway of the Mets.', copyright: 'Lynne Sladky/Associated Press, Jasen Vinlove/USA Today Sports, via Reuters' }) ], short_url: 'https://nyti.ms/2uvatMy' }) ].
-    at new ZoneAwareError node_modules/zone.js/dist/zone.js:992:1)
-    at Object.&lt;anonymous&gt; src/app/store/reducers/news.reducer.spec.ts:169:24)
-    at step (http://localhost:9876/_karma_webpack_/main.bundle.js:1401:23)
-    at Object.next (http://localhost:9876/_karma_webpack_/main.bundle.js:1382:53)
-    at http://localhost:9876/_karma_webpack_/main.bundle.js:1376:71
-    at new ZoneAwarePromise node_modules/zone.js/dist/zone.js:729:1)
-    at webpackJsonp../src/app/store/reducers/news.reducer.spec.ts.__awaiter (http://localhost:9876/_karma_webpack_/main.bundle.js:1372:12)
-    at Object.&lt;anonymous&gt; src/app/store/reducers/news.reducer.spec.ts:165:72)
-    at ZoneDelegate.webpackJsonp../node_modules/zone.js/dist/zone.js.ZoneDelegate.invoke node_modules/zone.js/dist/zone.js:334:1)
-</failure>
-  </testcase>
-  <testcase name="The news reducer should return the filter value, when getFilter() is called" time="0.001" classname="unit.The news reducer">
-    <failure type="">Expected undefined to be 'movies'.
-    at new ZoneAwareError node_modules/zone.js/dist/zone.js:992:1)
-    at Object.&lt;anonymous&gt; src/app/store/reducers/news.reducer.spec.ts:180:24)
-    at step (http://localhost:9876/_karma_webpack_/main.bundle.js:1401:23)
-    at Object.next (http://localhost:9876/_karma_webpack_/main.bundle.js:1382:53)
-    at http://localhost:9876/_karma_webpack_/main.bundle.js:1376:71
-    at new ZoneAwarePromise node_modules/zone.js/dist/zone.js:729:1)
-    at webpackJsonp../src/app/store/reducers/news.reducer.spec.ts.__awaiter (http://localhost:9876/_karma_webpack_/main.bundle.js:1372:12)
-    at Object.&lt;anonymous&gt; src/app/store/reducers/news.reducer.spec.ts:171:70)
-    at ZoneDelegate.webpackJsonp../node_modules/zone.js/dist/zone.js.ZoneDelegate.invoke node_modules/zone.js/dist/zone.js:334:1)
-</failure>
-  </testcase>
+  <testcase name="NavbarComponent should define the store" time="0.04" classname="unit.NavbarComponent"/>
+  <testcase name="NavbarComponent should define subsections" time="0.053" classname="unit.NavbarComponent"/>
+  <testcase name="NavbarComponent should display subsection in template" time="0.042" classname="unit.NavbarComponent"/>
+  <testcase name="NavbarComponent should call dispatchAction() when subsection is clicked" time="0.075" classname="unit.NavbarComponent"/>
+  <testcase name="NavbarComponent should dispatch action when dispatchAction is called" time="0.075" classname="unit.NavbarComponent"/>
+  <testcase name="NewsItemComponent should be created" time="0.069" classname="unit.NewsItemComponent"/>
+  <testcase name="NewsItemComponent should display title in template" time="0.076" classname="unit.NewsItemComponent"/>
+  <testcase name="NewsItemComponent should display news abstract in template" time="0.045" classname="unit.NewsItemComponent"/>
+  <testcase name="NewsComponent should create" time="0.1" classname="unit.NewsComponent"/>
+  <testcase name="NewsComponent should define the store" time="0.09" classname="unit.NewsComponent"/>
+  <testcase name="SectionsComponent should create the component" time="0.089" classname="unit.SectionsComponent"/>
+  <testcase name="SectionsComponent should store the sections in array: sectionList " time="0.067" classname="unit.SectionsComponent"/>
+  <testcase name="SectionsComponent should display the section name in DOM" time="0.051" classname="unit.SectionsComponent"/>
+  <testcase name="NewsService should be created" time="0.013" classname="unit.NewsService"/>
+  <testcase name="NewsService should get results" time="0.014" classname="unit.NewsService"/>
+  <testcase name="The news reducer should load news, when LOAD_SECTION_NEWS dispatched" time="0.001" classname="unit.The news reducer"/>
+  <testcase name="The news reducer should update the filter, when FILTER_SUBSECTION is dispatched" time="0" classname="unit.The news reducer"/>
+  <testcase name="The news reducer should return the list of news, when getNewsList() is called" time="0.001" classname="unit.The news reducer"/>
+  <testcase name="The news reducer should return the filter value, when getFilter() is called" time="0" classname="unit.The news reducer"/>
   <testcase name="The sections reducer should return the list of sections, when LOAD_SECTIONS is dispatched" time="0" classname="unit.The sections reducer"/>
-  <testcase name="The sections reducer should return the initial state if no action is dispatched" time="0.001" classname="unit.The sections reducer"/>
+  <testcase name="The sections reducer should return the initial state if no action is dispatched" time="0" classname="unit.The sections reducer"/>
   <system-out>
     <![CDATA[HeadlessChrome 85.0.4183 (Windows 10.0.0) ERROR: 'Unhandled Promise rejection:', 'Error in :0:0 caused by: Cannot read property 'newsList' of undefined', '; Zone:', 'ProxyZone', '; Task:', 'setTimeout', '; Value:', ViewWrappedError{__zone_symbol__error: Error{originalStack: 'Error: Error in :0:0 caused by: Cannot read property 'newsList' of undefined
     at ViewWrappedError.ZoneAwareError (http://localhost:9876/_karma_webpack_/webpack:/node_modules/zone.js/dist/zone.js:992:1)
